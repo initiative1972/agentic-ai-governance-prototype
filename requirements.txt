@@ -1,0 +1,6 @@
+# Core prototype: pure Python standard library — no third-party dependencies.
+# Requires Python 3.10+.
+
+# Optional — for production-grade runtime enforcement, integrate the Microsoft
+# Agent Governance Toolkit (see docs/toolkit_integration.md). Uncomment to use:
+# agent-governance-toolkit[full]

@@ -1,0 +1,23 @@
+{
+  "description": "Illustrative governance thresholds. Agree these with Risk & Compliance per use case.",
+  "money_approval_threshold": 1000.0,
+  "risk_bands": {
+    "low_max": 4,
+    "medium_max": 9,
+    "high_max": 14
+  },
+  "decisions_by_band": {
+    "Low": "ALLOW_WITH_LOG",
+    "Medium": "ALLOW_WITH_LOG (approval if money/external/irreversible)",
+    "High": "STEP_UP_AUTH",
+    "Critical": "DENY"
+  },
+  "hard_gates": [
+    "action requires a capability not granted to the agent -> DENY",
+    "action touches data above the agent's clearance -> DENY"
+  ],
+  "circuit_breaker": {
+    "high_risk_limit": 3,
+    "cascade_limit": 2
+  }
+}

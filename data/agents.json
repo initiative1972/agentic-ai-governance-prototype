@@ -1,0 +1,47 @@
+{
+  "system": "Enterprise Multi-Agent System",
+  "version": "pilot-v1",
+  "owner": "Henry Yan",
+  "agents": [
+    {
+      "agent_id": "orc-1",
+      "name": "Orchestrator",
+      "owner": "AI Platform Team",
+      "role": "customer-service orchestrator",
+      "capabilities": ["read_kb", "call_tool:handoff", "send_external"],
+      "clearance": "internal",
+      "trust_tier": "STANDARD",
+      "human_oversight": true
+    },
+    {
+      "agent_id": "kb-1",
+      "name": "KB Retriever",
+      "owner": "AI Platform Team",
+      "role": "retrieval agent",
+      "capabilities": ["read_kb"],
+      "clearance": "internal",
+      "trust_tier": "LIMITED",
+      "human_oversight": true
+    },
+    {
+      "agent_id": "pay-1",
+      "name": "Payments Agent",
+      "owner": "Payments Eng",
+      "role": "payment execution agent",
+      "capabilities": ["call_tool:payments", "pay"],
+      "clearance": "confidential",
+      "trust_tier": "PRIVILEGED",
+      "human_oversight": true
+    },
+    {
+      "agent_id": "util-1",
+      "name": "Utility Agent",
+      "owner": "Unassigned",
+      "role": "general utility agent",
+      "capabilities": ["read_kb"],
+      "clearance": "internal",
+      "trust_tier": "UNTRUSTED",
+      "human_oversight": true
+    }
+  ]
+}
